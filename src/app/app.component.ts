@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cloud-frontend';
+
+  chooseFile() {
+    var input = document.getElementById("fileInput");
+    if(input != null) {
+      input.click();
+    }
+  }
 }
