@@ -6,12 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cloud-frontend';
-
   chooseFile() {
-    var input = document.getElementById("fileInput");
-    if(input != null) {
-      input.click();
+    var fileInput = document.getElementById('fileInput');
+    if(fileInput != null) {
+      fileInput.click();
     }
+  }
+
+  fileChanged() {
+    (<HTMLInputElement>document.getElementById('fileInputLabel')).innerHTML = (<HTMLInputElement>document.getElementById('fileInput')).value.substring(12);
   }
 }
